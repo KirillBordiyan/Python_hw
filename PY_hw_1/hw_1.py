@@ -79,4 +79,27 @@ def task_6():
         return "not lucky"
 
 
-print(task_6())
+# print(task_6())
+
+
+
+
+# Задача 8: Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек, 
+# если разрешается сделать один разлом по прямой между дольками (то есть разломить шоколадку на два прямоугольника).
+# *Пример:*
+# 3 2 4 -> yes
+# 3 2 1 -> no
+
+
+def choco():
+    firstSide = int(input())
+    secondSide = int(input())
+    chocoSlice = int(input())
+    
+    if (chocoSlice % firstSide == 0 or chocoSlice % secondSide == 0) and chocoSlice <= (firstSide * secondSide):
+        return True
+    else:
+        return False
+    
+
+print(choco())
