@@ -1,5 +1,3 @@
-import math
-
 def ReadInt(args,long):
     
     entrence = input(f"input {args}, len = {long}: ")
@@ -15,9 +13,8 @@ def ReadInt(args,long):
 # 123 -> 6 (1 + 2 + 3)
 # 100 -> 1 (1 + 0 + 0) 
 
-
 def task_2():
-    number = int(ReadInt("number task 2", 3))
+    number = int(ReadInt("three-digit number:", 3))
     sum = 0
     
     while (number >= 1):
@@ -25,10 +22,6 @@ def task_2():
         number = number // 10
         
     return sum
-
-
-# print(task_2())
-
 
 
 
@@ -43,16 +36,14 @@ def task_2():
 
 def task_4():
     
-    s = int(input("количество, кратное 6: "))
+    s = int(input("multiply 6: "))
     while(s % 6 != 0):
-        s = int(input(f"{s} не кратно 6, еще раз: "))
+        s = int(input(f"{s} not a multiple of 6, again: "))
     
     x = s // 6
     
     return f"Петя {x}, Катя {4 * x}, Сережа {x}"
     
-
-# print(task_4())
 
 
 
@@ -67,19 +58,16 @@ def task_4():
 
 
 def task_6():
-    bilet = ReadInt("bilet, task 6: ", 6)
+    bilet = ReadInt("ticket, 6 nymbers: ", 6)
     bList = []
     
     for char in bilet:
         bList.append(int(char))
 
     if sum(bList[:len(bList)//2]) == sum(bList[3:len(bList)]):
-        return "yes"
+        return "yes, lucky"
     else:
-        return "not lucky"
-
-
-# print(task_6())
+        return "unlucky"
 
 
 
@@ -91,15 +79,14 @@ def task_6():
 # 3 2 1 -> no
 
 
-def choco():
-    firstSide = int(input())
-    secondSide = int(input())
-    chocoSlice = int(input())
+def task_8():
+    firstSide = int(input("1 side: "))
+    secondSide = int(input("2 side: "))
+    chocoSlice = int(input("need: "))
     
     if (chocoSlice % firstSide == 0 or chocoSlice % secondSide == 0) and chocoSlice <= (firstSide * secondSide):
         return True
     else:
         return False
-    
 
-print(choco())
+
