@@ -89,4 +89,19 @@ def task_8():
     else:
         return False
 
+def menu():
+    args = input("input number of task (2,4,6,8): ")
+    
+    if args == "2":
+        print(task_2())
+    elif args == "4":
+        print(task_4())
+    elif args == "6":
+        print(task_6())
+    elif args == "8":
+        print(task_8())
+    else:
+        print("undef number")
+        menu()
 
+menu()
