@@ -31,4 +31,32 @@ def coins():
 # Помогите Кате отгадать задуманные Петей числа.
 # дискриминант
 
+def task12():
+    
+    s = int(input())
+    p = int(input())
+    flag = False   
+    
+    for x in range(1000):
+        for y in range(1000):
+            if x+y == s and x*y == p:
+                flag = True
+                print(x,y)
+                break
+        if flag:
+            break
+    
+# task12()
 
+
+
+# Задача 14: Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
+
+def task14():
+    n = int(input())
+    step = 1
+    while 2**step < n:
+        print(2**step)
+        step += 1
+        
+# task14()
