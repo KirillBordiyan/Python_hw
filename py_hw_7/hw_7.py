@@ -80,8 +80,4 @@ def print_operation_table(oper, num_rows=6, num_columns=6):
    
     print(numbers)
 
-
-
-
 print_operation_table(oper = lambda x,y: x*y)
-
